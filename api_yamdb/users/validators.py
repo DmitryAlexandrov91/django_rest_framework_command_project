@@ -1,6 +1,6 @@
 """user app custom validators."""
-from django.core.exceptions import ValidationError
 from api.constants import RESTRICTED_NAMES
+from django.core.exceptions import ValidationError
 
 
 def validate_username(value):

@@ -1,7 +1,6 @@
 from datetime import timedelta
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -27,6 +26,7 @@ INSTALLED_APPS = [
     'reviews.apps.ReviewsConfig',
     'users.apps.UsersConfig',
     'management.apps.ManagementConfig',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +120,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 SIMPLE_JWT = {

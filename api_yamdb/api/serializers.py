@@ -4,18 +4,12 @@ from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-
-from .constants import (EMAIL_PATTERN,
-                        MAX_LENGTH_NAME,
-                        MAX_USERNAME_LENGTH,
-                        RESTRICTED_NAMES,
-                        EMAIL_SUBJECT,
-                        EMAIL_FROM
-                        )
 from reviews.models import Category, Comment, Genre, Review, Title
 from reviews.validators import validate_year
-from .validators import validate_restricted_symbols
 
+from .constants import (EMAIL_FROM, EMAIL_PATTERN, EMAIL_SUBJECT,
+                        MAX_LENGTH_NAME, MAX_USERNAME_LENGTH, RESTRICTED_NAMES)
+from .validators import validate_restricted_symbols
 
 User = get_user_model()
 

@@ -1,18 +1,10 @@
 """api urls."""
 from django.urls import include, path
-
 from rest_framework.routers import DefaultRouter
 
-from .views import (
-    CategoryViewSet,
-    CreateUserViewSet,
-    CommentViewSet,
-    GenreViewSet,
-    get_jwt_token,
-    ReviewViewSet,
-    TitleViewSet,
-    UserViewSet
-)
+from .views import (CategoryViewSet, CommentViewSet, CreateUserViewSet,
+                    GenreViewSet, ReviewViewSet, TitleViewSet, UserViewSet,
+                    get_jwt_token)
 
 router_v1 = DefaultRouter()
 router_v1.register('categories', CategoryViewSet)

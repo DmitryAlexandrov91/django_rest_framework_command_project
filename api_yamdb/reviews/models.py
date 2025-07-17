@@ -1,11 +1,10 @@
 """reviews models."""
-from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db import models
 from api.constants import CUT_OFF_MAX_LENGTH, MAX_LENGTH_NAME, MAX_LENGTH_SLUG
 from django.contrib.auth import get_user_model
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
 
 from .validators import validate_year
-
 
 User = get_user_model()
 

@@ -1,10 +1,9 @@
 """User model for group project."""
+from api.constants import ADMIN, MAX_LENGTH_NAME, MODER, USER
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from api.constants import ADMIN, MAX_LENGTH_NAME, MODER, USER
 from .validators import validate_username
-
 
 ROLES = (
     (ADMIN, ADMIN),
